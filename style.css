@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://googleapis.com');
 
 :root {
     --font-base: "Inter", sans-serif;
     --font-titulo: "Anton", sans-serif;
     --color-primary: #E63946;
     --color-primary-dark: #C1272D;
-    --color-accent: #f4a300;
+    --color-accent: #F4A300;
     --color-dark: #201A17;
-    --color-light: #e9deb4c2;
+    --color-light: #FFF7ED;
     --color-gray: #6B7280;
     --radius: 14px;
 }      
@@ -28,7 +28,6 @@ h1, h2, h3 {
     font-family: var(--font-titulo);
     font-weight: 400;
     letter-spacing: 0.5px;
-
 }
 
 a {
@@ -54,7 +53,7 @@ img {
     font-weight: 600;
     cursor: pointer;
     text-align: center;
-    transition: transform 0.3s ease, box shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }  
 
 .botao:hover {
@@ -64,20 +63,20 @@ img {
 
 .botao-nav {
     background-color: var(--color-primary);
-    color: white;
+    color: var(--color-light);
     padding: 10px 22px;
 } 
 
 .cabecalho-site {
     background-color: var(--color-dark);
-    color: white;
+    color: var(--color-light);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .barra-navegacao {
-    color: white;
+    color: var(--color-light);
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
@@ -211,7 +210,8 @@ img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.cardapio-item img {
+.cardapio-item-imagem,
+.cardapio-item-imagem-combo {
     width: 100%;
     height: 160px;
     margin-bottom: 16px;
@@ -270,6 +270,10 @@ img {
     transition: background 0.2s ease, transform 0.2s ease;
 }   
 
+.adicionar-carrinho:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
 
 .sobre {
     max-width: 1100px;
@@ -343,4 +347,285 @@ img {
     gap: 24px;
     flex-wrap: wrap;
     justify-content: center;    
+}
+
+.depoimento {
+    background-color: var(--color-light);
+    border-radius: var(--radius);
+    padding: 32px;
+    flex-grow: 1;
+    flex-basis: 280px;
+    max-width: 320px;
+    text-align: left;
+}
+
+.autor {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.autor span {
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.reserva {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    text-align: center;
+}
+
+.reserva h2 {
+    font-size: 2.2rem;
+    margin-bottom: 48px;
+}
+
+.reserva > p {
+    color: var(--color-gray);
+    margin-bottom: 32px;
+}
+
+.reserva-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+
+.linha-formulario {
+    flex-grow: 1;
+    flex-basis: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.linha-formulario-completa {
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.linha-formulario label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.linha-formulario input,
+.linha-formulario select,
+.linha-formulario textarea {
+    width: 100%;
+    font-family: var(--font-base);
+    font-size: 1rem;
+    padding: 12px 14px;
+    border: 2px solid #e5ddd3;
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--color-dark);
+}
+
+.linha-formulario input:focus,
+.linha-formulario select:focus,
+.linha-formulario textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.linha-formulario textarea { /* impede o redimensionamento do textarea */
+    resize: none;
+}
+
+.formulario-enviar {
+    flex-grow: 1;
+    flex-basis: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.botao-destaque {
+    background: #fff;
+    color: var(--color-primary);
+}
+
+.chamada-final {
+    background: var(--color-primary);
+    color: white;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.chamada-final h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.chamada-final p {
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffe3d9;
+}
+
+.rodape-site {
+    background-color: var(--color-dark);
+    color: #e8d9cd;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 24px 100px;
+}
+
+.rodape-horario {
+    font-size: 0.85rem;
+    color: #a89485;
+    margin-top: 4px;
+}
+
+.rodape-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rodape-links a {
+    display:flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.rodape-links a i {
+    font-size: 18px;
+    color: inherit;
+}
+
+.rodape-links a:hover {
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 780px) {
+    .sobre, .destaque-conteudo {
+        flex-direction: column;
+    }
+
+    .destaque-texto, destaque-imagem, .sobre-texto, .sobre-imagem {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .menu-links {
+        display: none;
+    }
+    .destaque h1 {
+        font-size: 2.2rem;
+    }
+
+    .rodape-site {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.menu-abrir {
+    display: none;
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.carrinho-resumo {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: var(--color-dark);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 999px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    font-size: 0.95rem;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}   
+
+.carrinho-icone {
+    font-size: 1.2rem;
+}
+
+.adicionar-carrinho {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 10px;
+    background-color: var(--color-dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-base);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.reserva-confirmacao {
+    display: none;
+    margin-top: 24px;
+    padding: 18px 20px;
+    background: #e9f7ef;
+    border: var(--radius);
+    font-weight: 500;
+}
+
+.reserva-confirmacao.visivel {
+    display: block;
+}
+
+.foto-previa [hidden]{
+    display: none;
+}
+
+.foto-previa {
+    display: block;
+    margin-top: 12px;
+    max-width: 200px;
+    border-radius: 8px;
+    border: 2px solid #e5ddd3;
+}
+
+@media (max-width: 640px) {
+    .menu-abrir {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+    }
+
+    .menu-links, .menu-links-aberto {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-dark);
+        padding: 20px 24px;
+        gap: 16px;
+    }
 }
